@@ -25,13 +25,13 @@ Route::group(['middleware' => ['apiJwt']],function(){
     Route::get('usuario/{id}','Api\userController@show');
     Route::post('usuario','Api\userController@store');
     Route::put('usuario/{id}','Api\userController@update');
-    Route::delete('usuario/{id}','Api\userController@show');
+    Route::delete('usuario/{id}','Api\userController@destroy');
 
 
     Route::get('tarefa','Api\taskController@index');
     Route::get('tarefa/{id}','Api\taskController@show');
     Route::post('tarefa','Api\taskController@store');
     Route::put('tarefa/{id}','Api\taskController@update');
-    Route::delete('tarefa/{id}','Api\taskController@show');
+    Route::delete('tarefa/{id}','Api\taskController@destroy');
 
 });
